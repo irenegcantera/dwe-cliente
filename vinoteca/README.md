@@ -1,6 +1,10 @@
-# Practica13.7
+# VINOTECA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+
+## Install dependencies
+
+Run `npm install`.
 
 ## Development server
 
