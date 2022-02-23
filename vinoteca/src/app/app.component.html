@@ -1,0 +1,30 @@
+<div class="container">
+
+  <h1>Bienvenido/a a la web Vinoteca</h1>
+  <br>
+  <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
+    <div *ngFor="let vino of vinos" class="col">
+      <div class="card text-center h-100" style="width: 18rem;">
+        <div class="card-body">
+          <div>
+            <h4 class="card-title">{{ vino.name }}</h4>
+            <img class="card-img-top" src="assets/vino.jpg">
+            <h5 class="card-subtitle mb-2 text-muted">{{ vino.pvp }} euros</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  <hr>
+  <hr>
+
+  <h3>Formulario para insertar vinos</h3>
+  <label class="form-label" for="nombreVino">Wine name</label>
+  <br><input class="form-control" type="text" id="nombreVino" placeholder="Insert a name" name="nombre" [(ngModel)]="name">
+  <br><label class="form-label" for="precioVino">Wine PVP</label>
+  <br><input class="form-control" type="number" id="precioVino" placeholder="Insert a price" name="precio" [(ngModel)]="pvp">
+  <br><br><button type="submit" class="btn btn-info" (click)="addVino()">Insertar</button>
+
+</div>
