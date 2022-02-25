@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <br>
+      <h1>Aplicación {{ title }}</h1>
+      <p>Operando A</p>
+      <input type="number" [(ngModel)]="number1">
+      <br><br>
+      <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" title="Sumar" (click)="sumar()"> + </button>&nbsp;
+      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Restar"(click)="restar()"> - </button>&nbsp;
+      <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Multiplicar" (click)="multiplicar()"> * </button>&nbsp;
+      <button type="button" class="btn btn-warning text-light" data-bs-toggle="tooltip" data-bs-placement="right" title="Dividir" (click)="dividir()"> / </button>
+      <br><br>
+      <p>Operando B</p>
+      <input type="number" [(ngModel)]="number2">
+      <hr>
+      <p>Resultado</p>
+      <input type="number" [(ngModel)]="result" readonly>
+      <br><br><br>
+      <div *ngIf="error != ''" class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ error }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+</div>
