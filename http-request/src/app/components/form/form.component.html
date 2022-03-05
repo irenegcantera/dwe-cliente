@@ -1,0 +1,20 @@
+<label class="fw-bold mb-2" for="name">Name</label>
+<input class="form-control" type="text" name="name" placeholder="Name" #name>
+<br>
+<label class="fw-bold mb-2" for="job">Job</label>
+<input class="form-control" type="text" name="job" placeholder="Job" #job>
+<br>
+<button class="btn btn-outline-primary" type="button" (click)="send(name,job)">Send</button>
+
+<br><br><br>
+<div [ngSwitch] ="getMessage">
+    <div *ngSwitchCase="1"class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div *ngSwitchCase="2" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Warning!</strong> You should enter a name or a job.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div *ngSwitchDefault></div>
+</div>

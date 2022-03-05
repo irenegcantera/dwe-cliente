@@ -1,0 +1,14 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>NAME</th>
+            <th>JOB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of getUsers">
+            <td>{{ user.name }}</td>
+            <td>{{ user.job }}</td>
+        </tr>
+    </tbody>
+</table>
